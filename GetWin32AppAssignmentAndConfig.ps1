@@ -1,3 +1,29 @@
+<#
+    .SYNOPSIS
+        Retrieves all Win32 apps and their assignments, resolving group names and displaying detailed assignment info.
+
+    .LINK
+        https://twentynice.com  
+        https://www.linkedin.com/in/sebastiaan-smits-341513b6
+
+    .NOTES
+        Version:        0.1
+        Author:         Sebastiaan Smits
+        Creation Date:  June, 11th 2025
+        File:           Get-Win32AppAssignments.ps1
+
+        HISTORY:
+        2025-06-11  Initial release with assignment group name resolution and built-in groups handling.
+
+        LICENSE:
+        Use this code free of charge at your own risk.
+        Never deploy code into production if you do not know what it does.
+
+    .EXAMPLE
+        Get-Win32AppAssignments | Format-Table -AutoSize
+
+        Retrieves all Win32 apps and their assignments with resolved group names.
+#>
 function Get-Win32AppAssignments {
     # Cache for group names to avoid repeated calls
     $groupNameCache = @{}
